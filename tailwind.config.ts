@@ -7,12 +7,24 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'orange': '#f66a0a',
+      'green': '#28a745',
+      'blue': '#0070f3',
+      'light-blue': '#79b8ff',
+      'lightest-blue': '#c8e1ff',
+      'off-white': '#f6f8fa',
+      'grey': '#6a737d',
+      'slate': '#586069',
+      'black': '#1a1e22',
+      'dark-grey': '#24292e',
+      'white': '#ffffff'
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      fontFamily: {
+        'inter': ['Inter, system, -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Arial, sans-serif'],
+        'mono': ['SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace']
+      }
     },
   },
   plugins: [],
