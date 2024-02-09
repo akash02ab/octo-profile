@@ -24,6 +24,10 @@ const config: Config = {
       fontFamily: {
         'inter': ['Inter, system, -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Arial, sans-serif'],
         'mono': ['SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace']
+      },
+      screens: {
+        'xxs': '375px',
+        'xs': '480px'
       }
     },
   },
