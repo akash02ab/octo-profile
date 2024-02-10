@@ -1,13 +1,13 @@
 import style from "./style/ratelimit.style";
 
-interface propType {
+interface PropType {
   rateLimit: {
     remaining: number,
     limit: number
   } | null
 };
 
-export default function RateLimit({ rateLimit }: propType) {
+export default function RateLimit({ rateLimit }: PropType) {
   return (
     <>
       {rateLimit && (
