@@ -5,8 +5,8 @@ const ratelimit = `
   border-[40px]
   border-t-blue
   border-l-blue
-  border-b-black
-  border-r-black
+  border-b-black/0
+  border-r-black/0
 `;
 
 const limitCount = `
