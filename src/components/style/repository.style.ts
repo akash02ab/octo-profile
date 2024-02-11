@@ -7,6 +7,7 @@ const repoSection = `
   flex
   flex-col
   items-center
+  xxs:items-stretch
   space-y-12
 `;
 
@@ -38,15 +39,17 @@ const repoSubtext = `
 `;
 
 const repos = `
+  w-auto
   grid
   grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
   gap-5
 `;
 
 const repo = `
+  w-full
   h-full
   p-4
-  xs:p-8
+  xxs:p-8
   flex
   flex-col
   justify-between

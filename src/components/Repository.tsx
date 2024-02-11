@@ -61,13 +61,13 @@ export default function Repository({ repos }: PropType) {
           onValueChange={setSortType}
         />
       </header>
-      <div>
+      <>
         {topRepos.length ? (
           <ul className={style.repos}>
             {topRepos.map((repo) => {
               const language = repo.language || 'Markdown';
               return (
-                <li key={repo.id}>
+                <li key={repo.id} className="h-full">
                   <a href={repo.html_url} target="_blank" className={style.repo}>
                     <div className={style.repoTop}>
                       <div className={style.repoHead}>
@@ -106,7 +106,7 @@ export default function Repository({ repos }: PropType) {
         ) : (
             <p>No available repositories!</p>
         )}
-      </div>
+      </>
     </section>
   )
 }
