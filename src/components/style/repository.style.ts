@@ -6,6 +6,7 @@ const repoSection = `
   max-w-7xl
   flex
   flex-col
+  items-center
   space-y-12
 `;
 
