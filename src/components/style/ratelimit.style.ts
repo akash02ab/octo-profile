@@ -1,5 +1,5 @@
 const ratelimit = `
-  fixed
+  absolute
   w-10
   h-10
   border-[40px]
