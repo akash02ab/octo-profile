@@ -78,7 +78,7 @@ export default function Icon({ name, className }: PropType) {
       </svg>
     )
     case 'loading': return (
-      <div role="status" className="w-full h-[calc(100vh-75px)] flex justify-center items-center">
+      <div role="status" className="w-full h-screen flex justify-center items-center bg-black">
         <svg
           aria-hidden="true"
           className={className}
