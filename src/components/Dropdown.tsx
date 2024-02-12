@@ -7,10 +7,10 @@ interface PropTypes {
   onValueChange: (value:string) => void
 };
 
-type eventT = ChangeEvent<HTMLSelectElement>;
+type EventT = ChangeEvent<HTMLSelectElement>;
 
 export default function DropDown({ items, value, onValueChange }: PropTypes) {
-  const handleValueChange = useCallback((event: eventT) => {
+  const handleValueChange = useCallback((event: EventT) => {
     const {
       target: { value: selectedValue }
     } = event;
