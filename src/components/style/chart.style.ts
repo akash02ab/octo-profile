@@ -12,6 +12,7 @@ const chartSection = `
 
 const chartWrapper = `
   p-8
+  h-full
   flex
   flex-col
   space-y-8
