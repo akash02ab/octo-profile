@@ -52,7 +52,8 @@ export default function Icon({ name, className }: PropType) {
           <path
             fill="#0070f3"
             d="M4.5 1037.361a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .748.436l3.252-1.86 3.252 1.86a.5.5 0 0 0 .748-.436v-13a.5.5 0 0 0-.5-.5h-7zm.5 1h6V1050l-2.752-1.572a.5.5 0 0 0-.496 0L5 1050v-11.639Z"
-          />
+            overflow="visible"
+            transform="translate(0 -1036.362)" />
         </g>
       </svg>
     )
