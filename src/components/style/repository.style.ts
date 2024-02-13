@@ -1,9 +1,4 @@
 const repoSection = `
-  p-4
-  xxs:p-8
-  xs:p-16
-  sm:p-24
-  max-w-7xl
   flex
   flex-col
   items-center

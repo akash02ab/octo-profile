@@ -1,8 +1,4 @@
 const chartSection = `
-  p-4
-  xxs:p-8
-  xs:p-16
-  max-w-7xl
   grid
   grid-cols-[repeat(auto-fill,minmax(300px,1fr))]
   justify-center

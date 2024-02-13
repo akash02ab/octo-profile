@@ -134,7 +134,7 @@ export default function User() {
       {rateLimit && <RateLimit rateLimit={rateLimit} />}
       <Corner />
       {error && error.active ? <ErrorPage error={error} /> : (
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-7xl space-y-16 p-4 xxs:p-8 xs:p-16">
           {user && <Profile user={user} />}
           {languages && repos && <Charts languages={languages} repos={repos}/>}
           {repos && <Repository repos={repos} />}

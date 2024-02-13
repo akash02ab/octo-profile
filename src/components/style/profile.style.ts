@@ -1,7 +1,4 @@
 const profileSection = `
-  p-8
-  xxs:p-16
-  max-w-7xl
   flex
   flex-col
   items-center
