@@ -30,7 +30,7 @@ export default function Repository({ repos }: PropType) {
   const [topRepos, setTopRepos] = useState<Repo[]>([]);
 
   const getTopRepos = (type: keyof typeof map) => {
-    const LIMIT = 8;
+    const LIMIT = 9;
     const map: Map = {
       stars: 'stargazers_count',
       forks: 'forks_count',
