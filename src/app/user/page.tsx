@@ -1,6 +1,6 @@
 'use client'
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Corner from "@/components/Corner";
 import RateLimit from "@/components/RateLimit";
 import ErrorPage from "@/components/Error";
@@ -122,25 +122,29 @@ export default function User() {
 
   if (isLoading) {
     return (
-      <Icon
-        name="loading"
-        className="w-8 h-8 text-grey animate-spin fill-blue"
-      />
+      <Suspense>
+        <Icon
+          name="loading"
+          className="w-8 h-8 text-grey animate-spin fill-blue"
+        />
+      </Suspense>
     );
   }
   
   return (
-    <main className="bg-black min-h-screen">
-      {rateLimit && <RateLimit rateLimit={rateLimit} />}
-      <Corner />
-      {error && error.active ? <ErrorPage error={error} /> : (
-        <div className="container mx-auto max-w-7xl space-y-16 p-4 xxs:p-8 xs:p-16">
-          {user && <Profile user={user} />}
-          {languages && repos && <Charts languages={languages} repos={repos}/>}
-          {repos && <Repository repos={repos} />}
-          <Footer />
-        </div>
-      )}
-    </main>
+    <Suspense>
+      <main className="bg-black min-h-screen">
+        {rateLimit && <RateLimit rateLimit={rateLimit} />}
+        <Corner />
+        {error && error.active ? <ErrorPage error={error} /> : (
+          <div className="container mx-auto max-w-7xl space-y-16 p-4 xxs:p-8 xs:p-16">
+            {user && <Profile user={user} />}
+            {languages && repos && <Charts languages={languages} repos={repos}/>}
+            {repos && <Repository repos={repos} />}
+            <Footer />
+          </div>
+        )}
+      </main>
+    </Suspense>
   )
 }
