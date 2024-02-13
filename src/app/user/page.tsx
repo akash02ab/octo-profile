@@ -1,5 +1,4 @@
 'use client'
-import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import Corner from "@/components/Corner";
 import RateLimit from "@/components/RateLimit";
@@ -11,6 +10,11 @@ import Footer from "@/components/Footer";
 import Icon from "@/components/Icons";
 
 const GhPolyglot = require("gh-polyglot");
+
+type PropType = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+};
 
 type LimitT = {
   remaining: number,
@@ -30,10 +34,10 @@ interface Stat {
 
 type statsT = Stat[]
 
-export default function User() {
+export default function User(props:PropType) {
   const API = 'https://api.github.com';
-  const searchParams = useSearchParams();
-  const username = searchParams.get('id');
+  const { searchParams } = props;
+  const username = searchParams.id;
   const [isLoading, setIsLoading] = useState(false);
   const [rateLimit, setRateLimit] = useState<LimitT>(null);
   const [user, setUser] = useState(null);
@@ -121,18 +125,11 @@ export default function User() {
   }, []);
 
   if (isLoading) {
-    return (
-      <Suspense>
-        <Icon
-          name="loading"
-          className="w-8 h-8 text-grey animate-spin fill-blue"
-        />
-      </Suspense>
-    );
+    return <Loading />
   }
   
   return (
-    <Suspense>
+    <Suspense fallback={<Loading />}>
       <main className="bg-black min-h-screen">
         {rateLimit && <RateLimit rateLimit={rateLimit} />}
         <Corner />
@@ -146,5 +143,14 @@ export default function User() {
         )}
       </main>
     </Suspense>
+  )
+}
+
+function Loading() {
+  return (
+    <Icon
+      name="loading"
+      className="w-8 h-8 text-grey animate-spin fill-blue"
+    />
   )
 }
