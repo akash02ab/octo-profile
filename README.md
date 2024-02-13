@@ -1,6 +1,6 @@
 # Octo Profile
 
-A nicer look to you GitHub Profile with charts!
+A nicer look to your GitHub Profile with charts!
 
 ### Desktop View
 
