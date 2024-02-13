@@ -1,4 +1,4 @@
-const footer = `flex items-center gap-2 p-4 mx-auto w-fit text-white`;
+const footer = `flex flex-wrap items-center justify-center gap-2 p-4 mx-auto w-fit text-white`;
 
 const text = `text-base text-off-white`;
 
