@@ -1,4 +1,4 @@
-import { Chart, ChartItem, ChartType, LegendOptions } from 'chart.js/auto';
+import { Chart, ChartItem, ChartType } from 'chart.js/auto';
 
 const defaultBackgroundColor = [
   'rgba(255, 99, 132, 0.7)',
@@ -102,6 +102,7 @@ const buildChart = (config: Config) => {
     options: {
       scales: buildScales(axes),
       plugins: {
+        // @ts-ignore
         legend: buildLegend(legend),
         tooltip: buildTooltip()
       },
